@@ -1,9 +1,11 @@
-import Component from './Components/Component';
+
 
 function App() {
-  return (
-    <div>
-      <Component/>
+  return(
+    <div className="app container">
+      <div className="jumbotron">
+        <p className="lead text-center">This is search</p>
+      </div>
     </div>
   );
 }
