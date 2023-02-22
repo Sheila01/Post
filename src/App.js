@@ -1,9 +1,11 @@
-import AppDos from './Components/AppDos';
+import AppTwo from './Components/AppTwo';
+import Search from './Components/Search'
 
 function App() {
   return(
     <div >
-      <AppDos/>
+      <AppTwo/>
+      <Search/>
     </div>
   );
 }
