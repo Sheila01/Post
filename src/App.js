@@ -1,9 +1,9 @@
-
+import Component from './Components/Component';
 
 function App() {
   return (
     <div>
-      ee
+      <Component/>
     </div>
   );
 }
