@@ -1,11 +1,14 @@
-import React, { Component } from 'react';
-/*const Search = () => {
+import React, { Component, useState} from 'react';
+const Search = () => {
 
   const busquedaRef = React.createRef()
   const obtenerDatos = (e) => {
-    state = {
-      finish:''
+    constructor(props){
+      this.state = {
+        finish:''
+      }
     }
+    console.log(state)
     e.preventeDefault()
     const finish = this.busquedaRef.current.value
     this.props.obtenerDatos(finish)
@@ -25,8 +28,10 @@ import React, { Component } from 'react';
     </div>
   );
 };
-export default Search;*/
+export default Search;
 
+
+/*
 class Search extends Component {
   busquedaRef = React.createRef();
   obtenerDatos = (e) => {
@@ -56,3 +61,4 @@ class Search extends Component {
   }
 }
 export default Search;
+*/
