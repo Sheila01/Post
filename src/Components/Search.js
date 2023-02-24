@@ -3,7 +3,8 @@ const Search = () => {
   const busquedaRef = React.createRef()
   const obtenerDatos = (e) => {
     e.preventeDefault()
-    this.props.mensaje
+    const finish = this.busquedaRef.current.value
+    this.props.obtenerDatos(finish)
   }
   return (
     <div>
