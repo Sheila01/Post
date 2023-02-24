@@ -1,24 +1,17 @@
-import React, { Component, useState} from 'react';
+import React from 'react';
 const Search = () => {
-
-  const busquedaRef = React.createRef()
+  const busquedaRef = React.createRef();
   const obtenerDatos = (e) => {
-    constructor(props){
-      this.state = {
-        finish:''
-      }
-    }
-    console.log(state)
-    e.preventeDefault()
-    const finish = this.busquedaRef.current.value
-    this.props.obtenerDatos(finish)
-  }
+    e.preventeDefault();
+    const finish = this.busquedaRef.current.value;
+    this.props.obtenerDatos(finish);
+  };
   return (
     <div>
       <form onSubmit={obtenerDatos}>
         <div className='row'>
           <div className='form-group col-md-8'>
-            <input ref={busquedaRef} type='text' className='form-control form-control-lg' placeholder='Search img'/>
+            <input ref={busquedaRef} type='text' className='form-control form-control-lg' placeholder='Search img' />
           </div>
           <div className='form-group col-md-4'>
             <input type='submit' className='btn btn-lg btn-danger' placeholder='Search img'/>
@@ -29,8 +22,6 @@ const Search = () => {
   );
 };
 export default Search;
-
-
 /*
 class Search extends Component {
   busquedaRef = React.createRef();
@@ -52,7 +43,7 @@ class Search extends Component {
               <input ref={this.busquedaRef} type='text' className='form-control form-control-lg' placeholder='Search img' />
             </div>
             <div className='form-group col-md-4'>
-              <input type='submit' className='btn btn-lg btn-danger' placeholder='Search img' />
+              <input type='submit' className='btn btn-lg btn-danger' placeholder='Search img' value={state.finish} />
             </div>
           </div>
         </form>

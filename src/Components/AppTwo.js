@@ -1,17 +1,41 @@
 import Search from './Search'
+import React, {Component} from 'react'
 
-const AppTwo = () => {
+/*const AppTwo = () => {
+  state = {
+    finish: ''
+  }
     const datosBusqueda = (termino) => {
     console.log(termino)
   }
   return(
     <div className="app container">
       <div className="jumbotron">
-        <p className="lead text-center">This is search</p>
+        <p className="lead text-center">TConseguido his is search</p>
         <Search datosBusqueda={datosBusqueda}/>
       </div>
     </div>
   )
 }
 
+export default AppTwo*/
+
+class AppTwo extends Component{
+  state = {
+    finish: 'ff'
+  }
+  datosBusqueda = (termino) => {
+    console.log(termino)
+  }
+  render(){
+    return(
+      <div className="app container">
+      <div className="jumbotron">
+        <p className="lead text-center">This is search</p>
+        <Search datosBusqueda={this.datosBusqueda}/>
+      </div>
+    </div>
+    )
+  }
+}
 export default AppTwo
