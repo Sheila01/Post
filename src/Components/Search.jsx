@@ -1,5 +1,5 @@
-import React from 'react';
-const Search = () => {
+import React, {Component} from 'react';
+/*const Search = () => {
   const busquedaRef = React.createRef();
   const obtenerDatos = (e) => {
     e.preventeDefault();
@@ -22,15 +22,11 @@ const Search = () => {
   );
 };
 export default Search;
-/*
+ */
 class Search extends Component {
   busquedaRef = React.createRef();
   obtenerDatos = (e) => {
     e.preventeDefault()
-    state = {
-      finish: '',
-    };
-    e.preventeDefault();
     const finish = this.busquedaRef.current.value;
     this.props.obtenerDatos(finish);
   };
@@ -43,7 +39,7 @@ class Search extends Component {
               <input ref={this.busquedaRef} type='text' className='form-control form-control-lg' placeholder='Search img' />
             </div>
             <div className='form-group col-md-4'>
-              <input type='submit' className='btn btn-lg btn-danger' placeholder='Search img' value={state.finish} />
+              <input type='submit' className='btn btn-lg btn-danger' placeholder='Search img'/>
             </div>
           </div>
         </form>
@@ -52,4 +48,4 @@ class Search extends Component {
   }
 }
 export default Search;
-*/
+

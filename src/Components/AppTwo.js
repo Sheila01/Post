@@ -22,7 +22,7 @@ export default AppTwo*/
 
 class AppTwo extends Component{
   state = {
-    finish: 'ff'
+    finish: ''
   }
   datosBusqueda = (termino) => {
     console.log(termino)
@@ -34,6 +34,7 @@ class AppTwo extends Component{
         <p className="lead text-center">This is search</p>
         <Search datosBusqueda={this.datosBusqueda}/>
       </div>
+      {this.state.finish}
     </div>
     )
   }
