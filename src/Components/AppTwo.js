@@ -22,10 +22,12 @@ export default AppTwo*/
 
 class AppTwo extends Component{
   state = {
-    finish: ''
+    finish: 'Cafe'
   }
-  datosBusqueda = (termino) => {
-    console.log(termino)
+  datosBusqueda = (finish) => {
+    this.setState({
+      finish
+    })
   }
   render(){
     return(
