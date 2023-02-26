@@ -1,5 +1,6 @@
 import Search from './Search'
 import React, {Component} from 'react'
+import Result from './Result'
 //import axios from 'axios'
 
 /*const AppTwo = () => {
@@ -54,6 +55,7 @@ class AppTwo extends Component{
         <p className="lead text-center">This is search</p>
         <Search datosBusqueda={this.datosBusqueda}/>
       </div>
+      <Result img={this.state.img}/>
     </div>
     )
   }
