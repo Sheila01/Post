@@ -26,9 +26,7 @@ export default Search;
 class Search extends Component {
   busquedaRef = React.createRef();
   obtenerDatos = (e) => {
-    console.log(e)
-    e.preventeDefault();
-    console.log('ee', e)
+    e.preventDefault()
     const finish = this.busquedaRef.current.value;
     this.props.datosBusqueda(finish);
   };
