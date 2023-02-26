@@ -24,19 +24,18 @@ import React, {Component} from 'react';
 export default Search;
  */
 class Search extends Component {
-  busqeuedaRef = React.createRef();
+  busquedaRef = React.createRef();
   obtenerDatos = (e) => {
     e.preventeDefault();
     const finish = this.busquedaRef.current.value;
     this.props.datosBusqueda(finish);
-
   };
   render() {
     return (
         <form onSubmit={this.obtenerDatos}>
           <div className='row'>  
             <div className='form-group col-md-8'>
-              <input ref={this.busquedaRef} type='text' className='form-control form-control-lg' placeholder='Search img' />
+              <input  type='text' className='form-control form-control-lg' placeholder='Search img' />
             </div>
             <div className='form-group col-md-4'>
               <input type='submit' className='btn btn-lg btn-danger' placeholder='Search img' value='Search'/>
