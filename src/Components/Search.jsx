@@ -35,7 +35,7 @@ class Search extends Component {
         <form onSubmit={this.obtenerDatos}>
           <div className='row'>  
             <div className='form-group col-md-8'>
-              <input ref={this.busquedaRef} type='text' className='form-control form-control-lg' placeholder='Search img' />
+              <input ref={this.busquedaRef} type='text' className='form-control form-control-lg' placeholder='Search Img, Coffee, Soccer, Players, Movies etc' />
             </div>
             <div className='form-group col-md-4'>
               <input type='submit' className='btn btn-lg btn-danger' placeholder='Search img' value='Search'/>
