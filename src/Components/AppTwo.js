@@ -1,6 +1,6 @@
 import Search from './Search'
 import React, {Component} from 'react'
-import axios from 'axios'
+//import axios from 'axios'
 
 /*const AppTwo = () => {
   state = {
@@ -28,15 +28,16 @@ class AppTwo extends Component{
   consultaApi= () => {
     const finishs = this.state.finish
     const url = `https://pixabay.com/api/?key=33950841-2c471b5be87049afe6989d25f&q=${finishs}`
-    axios.url('http://localhost:3000/')
-  /*.then((response) => {
+   /* axios.url('http://localhost:3000/')
+  .then((response) => {
     console.log(response);
   })
   .catch((error) => {
     console.log(error);
   });*/
     fetch(url)
-     .then(respuesta => respuesta.json)
+     .then(respuesta => respuesta.json())
+     .then(result =>  console.log(result.hits))
   }
   datosBusqueda = (finish) => {
     this.setState({
