@@ -22,11 +22,17 @@ export default AppTwo*/
 
 class AppTwo extends Component{
   state = {
-    finish: 'Cafe'
+    finish: ''
+  }
+  consultaApi= () => {
+    const url = `https://pixabay.com/api/?key=33950841-2c471b5be87049afe6989d25f&q=${this.state.finish}`
+    console.log(url)
   }
   datosBusqueda = (finish) => {
     this.setState({
       finish
+    }, () => {
+      this.consultaApi()
     })
   }
   render(){
