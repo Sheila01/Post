@@ -23,7 +23,8 @@ export default AppTwo*/
 
 class AppTwo extends Component{
   state = {
-    finish: ''
+    finish: '',
+    img: []
   }
   consultaApi= () => {
     const finishs = this.state.finish
@@ -37,7 +38,7 @@ class AppTwo extends Component{
   });*/
     fetch(url)
      .then(respuesta => respuesta.json())
-     .then(result =>  console.log(result.hits))
+     .then(result => this.setState({img: result.hit}))
   }
   datosBusqueda = (finish) => {
     this.setState({
@@ -53,7 +54,6 @@ class AppTwo extends Component{
         <p className="lead text-center">This is search</p>
         <Search datosBusqueda={this.datosBusqueda}/>
       </div>
-      {this.state.finish}
     </div>
     )
   }
