@@ -27,7 +27,7 @@ class AppTwo extends Component{
     finish: '',
     img: []
   }
-  consultaApi= () => {
+  consultarApi= () => {
     const finishs = this.state.finish
     const url = `https://pixabay.com/api/?key=33950841-2c471b5be87049afe6989d25f&q=${finishs}`
    /* axios.url('http://localhost:3000/')
@@ -45,7 +45,7 @@ class AppTwo extends Component{
     this.setState({
       finish
     }, () => {
-      this.consultaApi()
+      this.consultarApi()
     })
   }
   render(){

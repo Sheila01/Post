@@ -18,7 +18,8 @@ export default Result*/
 class Result extends Component {
   mostrarImg = () => {
     const img = this.props.img
-    if(img.length === 0) return null
+    for(let i=0; img.length; i++){
+      if(img.length === 0) return null
     console.log(img)
       return(
         <React.Fragment>
@@ -26,7 +27,7 @@ class Result extends Component {
         </div>
       </React.Fragment>
       )
-    
+    }
   }
   render(){
     return(
