@@ -18,16 +18,15 @@ export default Result*/
 class Result extends Component {
   mostrarImg = () => {
     const img = this.props.img
-    for(let i=0; img.length; i++){
+      console.log('esto vaaaaa', img.length)
       if(img.length === 0) return null
-    console.log(img)
+      console.log(img.length, 'eeeeeee')
       return(
         <React.Fragment>
         <div className='col-12 p-5 row'>
         </div>
       </React.Fragment>
       )
-    }
   }
   render(){
     return(

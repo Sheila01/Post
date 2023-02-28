@@ -31,6 +31,7 @@ class Search extends Component {
     this.props.datosBusqueda(finish);
   };
   render() {
+    
     return (
         <form onSubmit={this.obtenerDatos}>
           <div className='row'>  
@@ -38,7 +39,7 @@ class Search extends Component {
               <input ref={this.busquedaRef} type='text' className='form-control form-control-lg' placeholder='Search Img, Coffee, Soccer, Players, Movies etc' />
             </div>
             <div className='form-group col-md-4'>
-              <input type='submit' className='btn btn-lg btn-danger' placeholder='Search img' value='Search'/>
+              <input type='submit' className='btn btn-lg btn-danger btn-block' placeholder='Search img' value='Search'/>
             </div>
           </div>
         </form>
