@@ -28,8 +28,8 @@ class AppTwo extends Component{
     img: []
   }
   consultarApi= () => {
-    const finishs = this.state.finish
-    const url = `https://pixabay.com/api/?key=33950841-2c471b5be87049afe6989d25f&q=${finishs}`
+    const finish = this.state.finish
+    const url = `https://pixabay.com/api/?key=33950841-2c471b5be87049afe6989d25f&q=${finish}&per_page=30`
    /* axios.url('http://localhost:3000/')
   .then((response) => {
     console.log(response);
@@ -39,7 +39,7 @@ class AppTwo extends Component{
   });*/
     fetch(url)
      .then(respuesta => respuesta.json())
-     .then(result => this.setState({img: result.hit}))
+     .then(result => this.setState({img: result.hits}))
   }
   datosBusqueda = (finish) => {
     this.setState({
