@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import Img from './Img';
 
 /*const Result = () => {
    const mostrarImg = () => {
@@ -18,12 +19,15 @@ export default Result*/
 class Result extends Component {
   mostrarImg = () => {
     const img = this.props.img
-      console.log('esto vaaaaa', img.length)
       if(img.length === 0) return null
-      console.log(img.length, 'eeeeeee')
+      console.log(img)
       return(
         <React.Fragment>
         <div className='col-12 p-5 row'>
+          
+          {img.map(i => {
+            <Img key={img.id} i={i}/>
+          })}
         </div>
       </React.Fragment>
       )
