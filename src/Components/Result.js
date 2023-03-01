@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import Img from './Img';
 import WebSite from './WebSite';
 
@@ -16,30 +16,24 @@ import WebSite from './WebSite';
 }
 export default Result*/
 
-
 class Result extends Component {
   mostrarImg = () => {
-    const img = this.props.img
-      if(img.length === 0) return null
-      console.log(img)
-      return(
-        <React.Fragment>
+    const img = this.props.img;
+    if (img.length === 0) return null;
+    console.log(img);
+    return (
+      <React.Fragment>
         <div className='col-12 p-5 row'>
-          
-          {img.map(i => (
-            <Img key={img.id} i={i}/>
+          {img.map((i) => (
+            <Img key={img.id} i={i} />
           ))}
         </div>
-        <WebSite/>
+        <WebSite />
       </React.Fragment>
-      )
-  }
-  render(){
-    return(
-      <React.Fragment>
-    {this.mostrarImg()}
-    </React.Fragment> 
-    )
+    );
+  };
+  render() {
+    return <React.Fragment>{this.mostrarImg()}</React.Fragment>;
   }
 }
-export default Result
+export default Result;
