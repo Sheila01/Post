@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import Img from './Img';
+import WebSite from './WebSite';
 
 /*const Result = () => {
    const mostrarImg = () => {
@@ -29,6 +30,7 @@ class Result extends Component {
             <Img key={img.id} i={i}/>
           ))}
         </div>
+        <WebSite/>
       </React.Fragment>
       )
   }
@@ -36,7 +38,7 @@ class Result extends Component {
     return(
       <React.Fragment>
     {this.mostrarImg()}
-    </React.Fragment>
+    </React.Fragment> 
     )
   }
 }
