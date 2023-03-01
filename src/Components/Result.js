@@ -25,9 +25,9 @@ class Result extends Component {
         <React.Fragment>
         <div className='col-12 p-5 row'>
           
-          {img.map(i => {
+          {img.map(i => (
             <Img key={img.id} i={i}/>
-          })}
+          ))}
         </div>
       </React.Fragment>
       )
