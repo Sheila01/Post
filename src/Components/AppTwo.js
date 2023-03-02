@@ -34,20 +34,23 @@ class AppTwo extends Component {
     page -= 1
     this.setState({
       page
+    }, () => {
+      this.consultarApi()
     })
-    console.log(page)
   }
   paginaSiguiente = () => {
     let page = this.state.page
     page += 1
     this.setState({
       page
+    }, () => {
+      this.consultarApi()
     })
-    console.log(page)
   }
   consultarApi = () => {
     const finish = this.state.finish;
-    const url = `https://pixabay.com/api/?key=33950841-2c471b5be87049afe6989d25f&q=${finish}&per_page=30`;
+    const page = this.state.page
+    const url = `https://pixabay.com/api/?key=33950841-2c471b5be87049afe6989d25f&&q=${finish}&per_page=30&page=${page}`;
     /* axios.url('http://localhost:3000/')
   .then((response) => {
     console.log(response);
