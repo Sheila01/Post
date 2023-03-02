@@ -29,11 +29,20 @@ class AppTwo extends Component {
     page: ''
   };
   paginaAnterior = () => {
-    console.log('Anterior...')
+    let page = this.state.page
+    if(page === 1 ) return null
+    page -= 1
+    this.setState({
+      page
+    })
+    console.log(page)
   }
   paginaSiguiente = () => {
     let page = this.state.page
     page += 1
+    this.setState({
+      page
+    })
     console.log(page)
   }
   consultarApi = () => {
