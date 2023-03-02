@@ -26,12 +26,15 @@ class AppTwo extends Component {
   state = {
     finish: '',
     img: [],
+    page: ''
   };
   paginaAnterior = () => {
     console.log('Anterior...')
   }
   paginaSiguiente = () => {
-    console.log('Siguiente...')
+    let page = this.state.page
+    page += 1
+    console.log(page)
   }
   consultarApi = () => {
     const finish = this.state.finish;
@@ -50,7 +53,8 @@ class AppTwo extends Component {
   datosBusqueda = (finish) => {
     this.setState(
       {
-        finish,
+        finish: 'Finish',
+        page: 1
       },
       () => {
         this.consultarApi();
