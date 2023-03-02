@@ -27,6 +27,12 @@ class AppTwo extends Component {
     finish: '',
     img: [],
   };
+  paginaAnterior = () => {
+    console.log('Anterior...')
+  }
+  paginaSiguiente = () => {
+    console.log('Siguiente...')
+  }
   consultarApi = () => {
     const finish = this.state.finish;
     const url = `https://pixabay.com/api/?key=33950841-2c471b5be87049afe6989d25f&q=${finish}&per_page=30`;
@@ -59,7 +65,7 @@ class AppTwo extends Component {
           <Search datosBusqueda={this.datosBusqueda} />
         </div>
         <div className='row justify-content-center'>
-          <Result img={this.state.img} />
+          <Result img={this.state.img} paginaAnterior={this.paginaAnterior} paginaSiguiente={this.paginaSiguiente}/>
         </div>
       </div>
     );

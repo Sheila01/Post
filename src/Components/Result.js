@@ -24,11 +24,11 @@ class Result extends Component {
     return (
       <React.Fragment>
         <div className='col-12 p-5 row'>
-          {img.map((i) => (
+          {img.map(i => (
             <Img key={img.id} i={i} />
           ))}
         </div>
-        <WebSite />
+        <WebSite paginaAnterior={this.props.paginaAnterior} paginaSiguiente={this.props.paginaSiguiente}/>
       </React.Fragment>
     );
   };
